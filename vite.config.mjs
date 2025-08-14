@@ -10,6 +10,9 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     rollupOptions: {
+      input: {
+        main: './index.html'
+      },
       output: {
         manualChunks: {
           vendor: ['@ffmpeg/ffmpeg', '@ffmpeg/core']
@@ -19,5 +22,10 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['@ffmpeg/ffmpeg']
+  },
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
   }
 })
