@@ -1,0 +1,28 @@
+{
+  "name": "ffmpeg-wasm-demo",
+  "version": "1.0.0",
+  "description": "FFmpeg WASM 视频转码演示项目，支持多种格式转换和性能监控",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ffmpeg",
+    "wasm",
+    "video",
+    "conversion",
+    "web"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "vite": "^5.4.19"
+  }
+}

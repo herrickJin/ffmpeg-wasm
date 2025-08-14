@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFmpeg WASM 实时转码测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-title {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .test-instructions {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .test-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .test-link:hover {
+            background: #5a67d8;
+        }
+        .feature-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .feature-list h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .feature-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 class="test-title">FFmpeg WASM 实时转码功能测试</h1>
+        
+        <div class="test-instructions">
+            <h3>📋 测试说明</h3>
+            <p>这个测试页面验证了实时转码和流式播放功能的完整性。请按照以下步骤进行测试：</p>
+            <ol>
+                <li>点击下方链接进入主应用</li>
+                <li>上传一个视频文件（建议使用小于50MB的MP4文件）</li>
+                <li>在"流式处理"选项中选择"实时转码"</li>
+                <li>点击"开始转码"按钮</li>
+                <li>观察视频是否在转码过程中就开始播放</li>
+            </ol>
+        </div>
+
+        <a href="/" class="test-link">🚀 进入主应用测试</a>
+
+        <div class="feature-list">
+            <h3>🎯 已实现的功能</h3>
+            <ul>
+                <li>MediaSource API集成 - 支持浏览器原生流式播放</li>
+                <li>分片转码处理 - 将视频分成5秒小段进行转码</li>
+                <li>实时播放控制 - 自动播放和状态显示</li>
+                <li>智能队列管理 - 防止缓冲区溢出</li>
+                <li>多种编码器支持 - H.264, H.265, VP8, VP9</li>
+                <li>性能监控 - 转码时间、文件大小、内存使用等</li>
+                <li>错误处理 - 完善的错误捕获和恢复机制</li>
+                <li>硬件加速 - 支持CUDA、QSV、VideoToolbox</li>
+            </ul>
+        </div>
+
+        <div class="feature-list">
+            <h3>🔧 技术特性</h3>
+            <ul>
+                <li>使用FFmpeg WASM在浏览器中进行视频转码</li>
+                <li>采用MPEG-TS格式便于流式传输</li>
+                <li>超快预设确保转码速度</li>
+                <li>异步处理避免阻塞UI</li>
+                <li>自动清理临时文件</li>
+                <li>响应式设计支持移动设备</li>
+            </ul>
+        </div>
+
+        <div class="test-instructions">
+            <h3>⚠️ 注意事项</h3>
+            <ul>
+                <li>需要现代浏览器支持WebAssembly和MediaSource API</li>
+                <li>大文件转码可能导致内存不足，建议使用小文件测试</li>
+                <li>转码速度取决于设备性能和视频复杂度</li>
+                <li>首次加载需要下载FFmpeg核心库（约32MB）</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
