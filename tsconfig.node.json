@@ -16,7 +16,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "vite.config.mjs",
+    "vite.config.js",
     "*.config.mjs",
     "*.config.js",
     "*.config.ts"
